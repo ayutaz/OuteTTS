@@ -11,6 +11,18 @@
 
 OuteTTS is an experimental text-to-speech model that uses a pure language modeling approach to generate speech, without architectural changes to the foundation model itself.
 
+## setup for windows(cuda)
+
+**build**
+```bash
+docker build . -t oute-tts
+```
+
+**run**
+```bash
+docker run -it --gpus all --rm -v "${PWD}:/work" oute-tts:latest bash
+```
+
 ## Compatibility
 
 OuteTTS supports the following backends:
